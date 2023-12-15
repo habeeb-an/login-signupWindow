@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded',()=>{
-
+//users data
     const users = [
         { username: 'user1', email: 'user1@example.com', password: 'password1' },
 
     ];
-   
+   // signup/login toggle
     document.getElementById('show-signup').addEventListener('click',()=>{
         document.getElementById('login-form').classList.add('hidden')
         document.getElementById('signup-form').classList.remove('hidden')
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         document.getElementById('signup-form').classList.add('hidden')
         document.getElementById('login-form').classList.remove('hidden')
     })
-
+    // Login functionality
     document.getElementById('login-button').addEventListener('click',(ev)=>{
         ev.preventDefault();
         const email=document.getElementById('login-email').value;
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         }
     });
 
+    //Signup functionality
     document.getElementById('signup-button').addEventListener('click',(ev)=>{
         ev.preventDefault();
         const username=document.getElementById('signup-username').value;
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         alert('Passwords do not match.');
         return;
     }
+    //email validatior
     if(users.some(user=>user.email===email)){
         alert('Email already exists')
         return ;
@@ -47,8 +49,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     users.push({username,email,password});
     console.log({users});
     alert('User registration completed succesfully');
-    // document.getElementById('signup-form').classList.add('hidden');
-    // document.getElementById('login-form').classList.remove('hidden');
+    document.getElementById('signup-form').classList.add('hidden');
+    document.getElementById('login-form').classList.remove('hidden');
 });
 
 });
