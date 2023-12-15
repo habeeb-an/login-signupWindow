@@ -14,13 +14,8 @@ This project implements a login and signup Window using HTML, TailwindCSS, and J
   ```
     git clone https://github.com/habeeb-an/login-signupWindow.git
   ```
-  
-  2. Open Login/signup window 
 
-- Open ```index.html``` in browser or 
-- Launch a web server with vs code extensions ```live server```
-
-### TailwindCSS Customization
+###  Setting TailwindCSS setup
 
 ### Prerequisite
 
@@ -33,6 +28,13 @@ To make changes in TailwindCSS, run the following command:
 
 npm run watch
 ```
+  
+  2. Open Login/signup window 
+
+- Open ```index.html``` in browser or 
+- Launch a web server with vs code extensions ```live server```
+
+
 
 # License
 
