@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded',()=>{
         }else{
             alert('Invalid login credentials')
         }
-
     });
 
     document.getElementById('signup-button').addEventListener('click',(ev)=>{
@@ -36,14 +35,20 @@ document.addEventListener('DOMContentLoaded',()=>{
         const passwordMatch=document.getElementById('signup-password').value;
    
     if(password != passwordMatch){
-        alert('Passwords do not match.')
+        alert('Passwords do not match.');
+        return;
     }
+    if(users.some(user=>user.email===email)){
+        alert('Email already exists')
+        return ;
+    }
+
    
     users.push({username,email,password});
     console.log({users});
     alert('User registration completed succesfully');
-    document.getElementById('signup-form').classList.add('hidden');
-    document.getElementById('login-form').classList.remove('hidden');
+    // document.getElementById('signup-form').classList.add('hidden');
+    // document.getElementById('login-form').classList.remove('hidden');
 });
 
 });
